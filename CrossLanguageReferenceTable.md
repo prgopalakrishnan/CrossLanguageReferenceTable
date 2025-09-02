@@ -7,10 +7,141 @@ int x = 10;
 double pi = 3.14;
 boolean flag = true;
 String name = "Alice";
-``` | ```ruby\nx = 10\npi = 3.14\nflag = true\nname = "Alice"\n``` | ```js\nlet x = 10;\nlet pi = 3.14;\nlet flag = true;\nlet name = "Alice";\n``` | ```python\nx = 10\npi = 3.14\nflag = True\nname = "Alice"\n``` |
-| **Collections** | ```java\nint[] arr = {1,2,3};\nList<String> list = List.of("a","b");\nMap<String,Integer> map = Map.of("a",1);\nSet<Integer> set = Set.of(1,2,3);\n``` | ```ruby\narr = [1,2,3]\nhash = { "a" => 1, "b" => 2 }\nset = Set.new([1,2,3])\n``` | ```js\nlet arr = [1,2,3];\nlet obj = {a:1, b:2};\nlet map = new Map([["a",1]]);\nlet set = new Set([1,2,3]);\n``` | ```python\narr = [1,2,3]\ndict_obj = {"a":1, "b":2}\nset_obj = {1,2,3}\ntuple_obj = (1,2,3)\n``` |
-| **For Loop** | ```java\nfor (int i=0; i<5; i++) {\n    System.out.println(i);\n}\n``` | ```ruby\nfor i in 0...5 do\n  puts i\nend\n``` | ```js\nfor (let i=0; i<5; i++) {\n  console.log(i);\n}\n``` | ```python\nfor i in range(5):\n    print(i)\n``` |
-| **For-Each Loop** | ```java\nfor (String s : list) {\n    System.out.println(s);\n}\n``` | ```ruby\narr.each do |x|\n  puts x\nend\n``` | ```js\narr.forEach(x => console.log(x));\n``` | ```python\nfor x in arr:\n    print(x)\n``` |
-| **While Loop** | ```java\nint i = 0;\nwhile (i < 5) {\n    System.out.println(i);\n    i++;\n}\n``` | ```ruby\ni = 0\nwhile i < 5 do\n  puts i\n  i += 1\nend\n``` | ```js\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n``` | ```python\ni = 0\nwhile i < 5:\n    print(i)\n    i += 1\n``` |
-| **HTTP GET** | ```java\nHttpClient client = HttpClient.newHttpClient();\nHttpRequest req = HttpRequest.newBuilder(URI.create(\"https://api.example.com\"))\n  .GET().build();\nHttpResponse<String> res = client.send(req, HttpResponse.BodyHandlers.ofString());\nSystem.out.println(res.body());\n``` | ```ruby\nrequire 'net/http'\nuri = URI('https://api.example.com')\nres = Net::HTTP.get(uri)\nputs res\n``` | ```js\nfetch(\"https://api.example.com\")\n  .then(res => res.json())\n  .then(data => console.log(data));\n``` | ```python\nimport requests\nres = requests.get(\"https://api.example.com\")\nprint(res.json())\n``` |
-| **HTTP POST** | ```java\nString json = \"{\\\"key\\\":\\\"value\\\"}\";\nHttpRequest req = HttpRequest.newBuilder()\n  .uri(URI.create(\"https://api.example.com\"))\n  .header(\"Content-Type\", \"application/json\")\n  .POST(HttpRequest.BodyPublishers.ofString(json))\n  .build();\nHttpResponse<String> res = client.send(req, HttpResponse.BodyHandlers.ofString());\nSystem.out.println(res.body());\n``` | ```ruby\nrequire 'net/http'\nrequire 'json'\nuri = URI('https://api.example.com')\nres = Net::HTTP.post(uri, { key: \"value\" }.to_json, \"Content-Type\" => \"application/json\")\nputs res.body\n``` | ```js\nfetch(\"https://api.example.com\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({ key: \"value\" })\n})\n.then(res => res.json())\n.then(data => console.log(data));\n``` | ```python\nimport requests\nres = requests.post(\"https://api.example.com\", json={\"key\": \"value\"})\nprint(res.json())\n``` |
+``` | ```ruby
+x = 10
+pi = 3.14
+flag = true
+name = "Alice"
+``` | ```js
+let x = 10;
+let pi = 3.14;
+let flag = true;
+let name = "Alice";
+``` | ```python
+x = 10
+pi = 3.14
+flag = True
+name = "Alice"
+``` |
+| **Collections** | ```java
+int[] arr = {1,2,3};
+List<String> list = List.of("a","b");
+Map<String,Integer> map = Map.of("a",1);
+Set<Integer> set = Set.of(1,2,3);
+``` | ```ruby
+arr = [1,2,3]
+hash = { "a" => 1, "b" => 2 }
+set = Set.new([1,2,3])
+``` | ```js
+let arr = [1,2,3];
+let obj = {a:1, b:2};
+let map = new Map([["a",1]]);
+let set = new Set([1,2,3]);
+``` | ```python
+arr = [1,2,3]
+dict_obj = {"a":1, "b":2}
+set_obj = {1,2,3}
+tuple_obj = (1,2,3)
+``` |
+| **For Loop** | ```java
+for (int i=0; i<5; i++) {
+    System.out.println(i);
+}
+``` | ```ruby
+for i in 0...5 do
+  puts i
+end
+``` | ```js
+for (let i=0; i<5; i++) {
+  console.log(i);
+}
+``` | ```python
+for i in range(5):
+    print(i)
+``` |
+| **For-Each Loop** | ```java
+for (String s : list) {
+    System.out.println(s);
+}
+``` | ```ruby
+arr.each do |x|
+  puts x
+end
+``` | ```js
+arr.forEach(x => console.log(x));
+``` | ```python
+for x in arr:
+    print(x)
+``` |
+| **While Loop** | ```java
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i++;
+}
+``` | ```ruby
+i = 0
+while i < 5 do
+  puts i
+  i += 1
+end
+``` | ```js
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+``` | ```python
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+``` |
+| **HTTP GET** | ```java
+HttpClient client = HttpClient.newHttpClient();
+HttpRequest req = HttpRequest.newBuilder(URI.create("https://api.example.com"))
+  .GET().build();
+HttpResponse<String> res = client.send(req, HttpResponse.BodyHandlers.ofString());
+System.out.println(res.body());
+``` | ```ruby
+require 'net/http'
+uri = URI('https://api.example.com')
+res = Net::HTTP.get(uri)
+puts res
+``` | ```js
+fetch("https://api.example.com")
+  .then(res => res.json())
+  .then(data => console.log(data));
+``` | ```python
+import requests
+res = requests.get("https://api.example.com")
+print(res.json())
+``` |
+| **HTTP POST** | ```java
+String json = "{\"key\":\"value\"}";
+HttpRequest req = HttpRequest.newBuilder()
+  .uri(URI.create("https://api.example.com"))
+  .header("Content-Type", "application/json")
+  .POST(HttpRequest.BodyPublishers.ofString(json))
+  .build();
+HttpResponse<String> res = client.send(req, HttpResponse.BodyHandlers.ofString());
+System.out.println(res.body());
+``` | ```ruby
+require 'net/http'
+require 'json'
+uri = URI('https://api.example.com')
+res = Net::HTTP.post(uri, { key: "value" }.to_json, "Content-Type" => "application/json")
+puts res.body
+``` | ```js
+fetch("https://api.example.com", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ key: "value" })
+})
+.then(res => res.json())
+.then(data => console.log(data));
+``` | ```python
+import requests
+res = requests.post("https://api.example.com", json={"key": "value"})
+print(res.json())
+``` |
