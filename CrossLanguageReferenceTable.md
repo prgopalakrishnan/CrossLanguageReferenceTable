@@ -2,7 +2,12 @@
 
 | **Concept** | **Java** | **Ruby** | **JavaScript** | **Python** |
 |-------------|----------|----------|----------------|------------|
-| **Common Data Types** | ```java\nint x = 10;\ndouble pi = 3.14;\nboolean flag = true;\nString name = "Alice";\n``` | ```ruby\nx = 10\npi = 3.14\nflag = true\nname = "Alice"\n``` | ```js\nlet x = 10;\nlet pi = 3.14;\nlet flag = true;\nlet name = "Alice";\n``` | ```python\nx = 10\npi = 3.14\nflag = True\nname = "Alice"\n``` |
+| **Common Data Types** | ```java
+int x = 10;
+double pi = 3.14;
+boolean flag = true;
+String name = "Alice";
+``` | ```ruby\nx = 10\npi = 3.14\nflag = true\nname = "Alice"\n``` | ```js\nlet x = 10;\nlet pi = 3.14;\nlet flag = true;\nlet name = "Alice";\n``` | ```python\nx = 10\npi = 3.14\nflag = True\nname = "Alice"\n``` |
 | **Collections** | ```java\nint[] arr = {1,2,3};\nList<String> list = List.of("a","b");\nMap<String,Integer> map = Map.of("a",1);\nSet<Integer> set = Set.of(1,2,3);\n``` | ```ruby\narr = [1,2,3]\nhash = { "a" => 1, "b" => 2 }\nset = Set.new([1,2,3])\n``` | ```js\nlet arr = [1,2,3];\nlet obj = {a:1, b:2};\nlet map = new Map([["a",1]]);\nlet set = new Set([1,2,3]);\n``` | ```python\narr = [1,2,3]\ndict_obj = {"a":1, "b":2}\nset_obj = {1,2,3}\ntuple_obj = (1,2,3)\n``` |
 | **For Loop** | ```java\nfor (int i=0; i<5; i++) {\n    System.out.println(i);\n}\n``` | ```ruby\nfor i in 0...5 do\n  puts i\nend\n``` | ```js\nfor (let i=0; i<5; i++) {\n  console.log(i);\n}\n``` | ```python\nfor i in range(5):\n    print(i)\n``` |
 | **For-Each Loop** | ```java\nfor (String s : list) {\n    System.out.println(s);\n}\n``` | ```ruby\narr.each do |x|\n  puts x\nend\n``` | ```js\narr.forEach(x => console.log(x));\n``` | ```python\nfor x in arr:\n    print(x)\n``` |
